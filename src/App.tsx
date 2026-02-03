@@ -39,25 +39,7 @@ function App() {
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {isLoading ? (
-          <div className="text-center py-12">
-            <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-blue-600 border-t-transparent"></div>
-            <p className="mt-4 text-gray-600">Loading classrooms...</p>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="space-y-8">
-              <AddClassroomForm onClassroomAdded={loadClassrooms} />
-              <AllocateSeats />
-            </div>
-
-            <div>
-              <ClassroomList classrooms={classrooms} onClassroomDeleted={loadClassrooms} />
-            </div>
-          </div>
-        )}
-      </main>
+      
 
       <footer className="mt-12 bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
